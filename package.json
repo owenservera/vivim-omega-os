@@ -1,0 +1,30 @@
+{
+  "name": "vivim-omega",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "contracts",
+    "host",
+    "shim",
+    "platform",
+    "plugins/*",
+    "packs/*",
+    "examples/*",
+    "surfaces/*",
+    "sdk",
+    "testkit"
+  ],
+  "scripts": {
+    "omega:setup": "bun install",
+    "omega:test": "bun test",
+    "omega:test:host": "bun test host",
+    "omega:test:plugins": "bun test plugins packs",
+    "omega:test:surfaces": "bun test surfaces sdk",
+    "omega:containment": "bun run platform/src/containment.ts",
+    "omega:host": "bun run host/src/main.ts"
+  },
+  "dependencies": {
+    "zod": "^4.6.2"
+  }
+}
